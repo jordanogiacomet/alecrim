@@ -1,0 +1,86 @@
+.app-header {
+    button {
+      margin: 0 16px;
+      position: relative;
+      overflow: hidden;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      font-weight: bold;
+  
+      &:hover {
+        transform: scale(1.05);
+      }
+  
+      &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: rgb(238, 101, 197);
+        bottom: 0;
+        left: 50%;
+        transition: width 0.3s ease, left 0.3s ease;
+      }
+  
+      &:hover::after {
+        width: 100%;
+        left: 0;
+      }
+    }
+  
+    .spacer {
+      flex: 1 1 auto;
+    }
+  
+    .mat-toolbar {
+      background-color: white;
+      color: rgb(238, 101, 197);
+      height: 100px;
+  
+      img {
+        width: 100px;
+        height: 100px;
+        transition: transform 0.3s ease;
+  
+        &:hover {
+          transform: rotate(360deg);
+        }
+      }
+  
+      // Estilos específicos para botões exceto "Cadastre-se" e "Login"
+      button:not(.account):not(.mat-stroked-button) {
+        &::after {
+          background-color: rgb(238, 101, 197);
+        }
+  
+        &:hover::after {
+          width: 100%;
+          left: 0;
+          background-color: rgb(238, 101, 197);
+        }
+      }
+  
+      // Remover o efeito de linha inferior para "Cadastre-se"
+      .account {
+        background-color: rgb(127, 255, 255);
+  
+        &::after {
+          content: none; // Remove o efeito de linha inferior
+        }
+      }
+  
+      // Estilos específicos para "Login"
+      .mat-stroked-button {
+        border-color: white;
+        transition: border-color 0.3s ease;
+  
+        &:hover {
+          border-color: rgb(238, 101, 197);
+        }
+  
+        &::after {
+          content: none; // Remove o efeito de linha inferior
+        }
+      }
+    }
+  }
+  
