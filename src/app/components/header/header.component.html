@@ -9,5 +9,67 @@
       <button mat-raised-button class="account">Cadastre-se</button>
       <button mat-stroked-button>Login</button>
     </mat-toolbar>
+    
+    <div class="menu">
+      <!-- Menu para Roupas -->
+      <button mat-button [matMenuTriggerFor]="menuRoupas">Roupas</button>
+      <mat-menu #menuRoupas="matMenu">
+        <button mat-menu-item>Body Baby</button>
+        <button mat-menu-item>Macacão</button>
+        <button mat-menu-item>Vestido Infantil</button>
+        <button mat-menu-item>Calça</button>
+        <button mat-menu-item>Camisa</button>
+      </mat-menu>
+      
+      <!-- Menu para Acessórios -->
+      <button mat-button [matMenuTriggerFor]="menuAcessorios">Acessórios</button>
+      <mat-menu #menuAcessorios="matMenu">
+        <button mat-menu-item>Boné</button>
+        <button mat-menu-item>Meias</button>
+        <button mat-menu-item>Luva</button>
+        <button mat-menu-item>Óculos</button>
+        <button mat-menu-item>Cinto</button>
+      </mat-menu>
+      
+      <!-- Menu para Calçados -->
+      <button mat-button [matMenuTriggerFor]="menuCalcados">Calçados</button>
+      <mat-menu #menuCalcados="matMenu">
+        <button mat-menu-item>Sapatinho</button>
+        <button mat-menu-item>Sandália</button>
+        <button mat-menu-item>Tênis</button>
+        <button mat-menu-item>Botinha</button>
+        <button mat-menu-item>Chinelo</button>
+      </mat-menu>
+  
+      <!-- Menu para Brinquedos -->
+      <button mat-button [matMenuTriggerFor]="menuBrinquedos">Brinquedos</button>
+      <mat-menu #menuBrinquedos="matMenu">
+        <button mat-menu-item>Urso de Pelúcia</button>
+        <button mat-menu-item>Blocos de Montar</button>
+        <button mat-menu-item>Roupas de Boneca</button>
+        <button mat-menu-item>Trenzinho</button>
+        <button mat-menu-item>Pipas</button>
+      </mat-menu>
+  
+      <!-- Menu para Maternidade -->
+      <button mat-button [matMenuTriggerFor]="menuMaternidade">Maternidade</button>
+      <mat-menu #menuMaternidade="matMenu">
+        <button mat-menu-item>Almofada de Amamentação</button>
+        <button mat-menu-item>Roupas de Cama</button>
+        <button mat-menu-item>Fraldas</button>
+        <button mat-menu-item>Produtos de Higiene</button>
+        <button mat-menu-item>Escova de Mamadeira</button>
+      </mat-menu>
+  
+      <!-- Menu para Decoração -->
+      <button mat-button [matMenuTriggerFor]="menuDecoracao">Decoração</button>
+      <mat-menu #menuDecoracao="matMenu">
+        <button mat-menu-item>Quadros</button>
+        <button mat-menu-item>Tapetes</button>
+        <button mat-menu-item>Luminárias</button>
+        <button mat-menu-item>Adesivos de Parede</button>
+        <button mat-menu-item>Cortinas</button>
+      </mat-menu>
+    </div>
   </header>
   
